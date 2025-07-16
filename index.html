@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Variant A - Original</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // Replace with your GA4 Measurement ID
+
+    // Push variant info
+    gtag('event', 'ab_test_variant', {
+      variant: 'A'
+    });
+  </script>
+  <style>
+    body { font-family: sans-serif; padding: 2em; }
+    .cta-btn {
+      background-color: blue;
+      color: white;
+      padding: 1em;
+      border: none;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Our Website!</h1>
+  <p>This is the original version of the page.</p>
+  <button class="cta-btn" onclick="gtag('event', 'cta_click', { variant: 'A' })">
+    Sign Up Now
+  </button>
+</body>
+</html>
